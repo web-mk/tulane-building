@@ -98,6 +98,7 @@ var swiper = new Swiper(".highlights-swiper", {
 
 // Swiper Configuration
 var swiper = new Swiper(".story-swiper", {
+  loop: true,
   slidesPerView: 1,
   spaceBetween: 20,
   navigation: {
@@ -105,3 +106,78 @@ var swiper = new Swiper(".story-swiper", {
       nextEl: ".story-section .swiper-next-button",
     },
 });
+
+
+// Dedication/Amounts Field Populate Logic JS
+
+(function () {
+  const formatAmount = (value) =>
+    `$${Number(value).toLocaleString()}`;
+
+  const updateFormFields = (dedicationText, amountValue) => {
+    const dedicationInput = document.querySelector('input[name="dedication"]');
+    const amountInput = document.querySelector(
+      '.details-form-card input[name="amount"]'
+    );
+
+    if (dedicationInput) dedicationInput.value = dedicationText;
+    if (amountInput) amountInput.value = formatAmount(amountValue);
+  };
+
+  const clearGiftPackages = () => {
+    document
+      .querySelectorAll('.gift-selection input[type="radio"]')
+      .forEach((radio) => (radio.checked = false));
+  };
+
+  const clearDedicationCards = () => {
+    document
+      .querySelectorAll('.dedication-card')
+      .forEach((card) => card.classList.remove('is-active'));
+  };
+
+  // const scrollToForm = () => {
+  //   document.querySelector('#partner')?.scrollIntoView({
+  //     behavior: 'smooth',
+  //   });
+  // };
+
+  document.querySelectorAll('.dedication-card').forEach((card) => {
+    card.addEventListener('click', () => {
+      const amountText = card.querySelector('.amount')?.textContent || '';
+      const labelText = card.querySelector('h3')?.textContent || '';
+      const numericAmount = amountText.replace(/[^\d]/g, '');
+      clearGiftPackages();
+      clearDedicationCards();
+      updateFormFields(`${labelText} – ${amountText}`, numericAmount);
+      card.classList.add('is-active');
+      scrollToForm();
+    });
+  });
+
+  document
+    .querySelectorAll('.gift-selection input[type="radio"]')
+    .forEach((radio) => {
+      radio.addEventListener('change', () => {
+        if (!radio.checked) return;
+
+        const card = radio.closest('.gift-card');
+        if (!card) return;
+
+        const priceText =
+          card.querySelector('.gift-price')?.textContent || '';
+        const termText =
+          card.querySelector('.gift-term')?.textContent || '';
+
+        const numericAmount = radio.value;
+
+        clearDedicationCards();
+
+        updateFormFields(
+          `${priceText} ${termText}`,
+          numericAmount
+        );
+      });
+    });
+
+})();

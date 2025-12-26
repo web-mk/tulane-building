@@ -24,22 +24,22 @@
             <div class="header-layout">
 
                 <!-- Logo -->
-                <div class="header-logo">
+                <a href="#" class="header-logo">
                     <img src="images/site-logo.png" width="91" height="101" alt="Site Logo">
-                </div>
+                </a>
 
                 <!-- Navigation -->
                 <nav class="header-nav">
-                    <a href="#">About</a>
-                    <a href="#">Highlights</a>
-                    <a href="#">Dedications</a>
-                    <a href="#">Partner</a>
-                    <a href="#">Why This Matters</a>
+                    <a href="#about">About</a>
+                    <a href="#highlights">Highlights</a>
+                    <a href="#dedications">Dedications</a>
+                    <a href="#partner">Partner</a>
+                    <a href="#why-this-matters">Why This Matters</a>
                 </nav>
 
                 <!-- Button -->
                 <div class="header-button">
-                    <a href="#" class="btn btn-primary btn-small">Donate</a>
+                    <a href="#details-form" class="btn btn-primary btn-small">Donate</a>
                 </div>
 
                 <!-- Mobile Toggle Hamburger -->
@@ -79,7 +79,7 @@
                         
                         <p>A new Chabad Grad Student Center in New Orleans' Garden District — a home for community, study, Shabbat, and connection.</p>
                         
-                        <a href="#" class="btn btn-primary">
+                        <a href="#details-form" class="btn btn-primary">
                             Dedicate Today
                             <span class="arrow-circle">
                                 <img src="images/arrow-icon-primary.svg" width="22" height="25" alt="arrow right">
@@ -118,7 +118,7 @@
 
         <!-- Center Info Starts -->
 
-        <section class="center-info-section">
+        <section class="center-info-section" id="about">
             <div class="container">
 
 
@@ -218,7 +218,7 @@
 
         <!-- Highlights Starts -->
 
-        <section class="highlights-section">
+        <section class="highlights-section" id="highlights">
             <div class="container">
 
 
@@ -416,7 +416,7 @@
 
         <!-- Dedication Starts -->
 
-        <section class="dedication-section">
+        <section class="dedication-section" id="dedications">
             <div class="container">
 
 
@@ -500,7 +500,7 @@
                         <h2>Make Your Legacy Part of the New Center</h2>
 
                         <!-- Button -->
-                        <a href="#" class="btn btn-primary white-bg">
+                        <a href="#details-form" class="btn btn-primary white-bg">
                             <span>Dedicate Today</span>
                             <span class="arrow-circle">
                                 <img src="images/arrow-icon-primary.svg" width="22" height="25" alt="arrow right">
@@ -528,14 +528,8 @@
         
         <!--  Become Partner Starts -->
 
-        <section class="become-partner-section">
+        <section class="become-partner-section" id="partner">
             <div class="container">
-
-
-                <!-- Commmunity Image -->
-                <div class="community-image">
-                    <img src="images/community-image.jpg" width="1320" height="440"  alt="Students at Chabad Graduate Center ">
-                </div>
 
 
                 <!-- Section Head -->
@@ -544,7 +538,7 @@
                     <!-- badge -->
                     <div class="badge partner-badge">
                         <img src="images/union-icon.svg" width="48" height="48" alt="union icon">
-                        <h2>Ways to Partner</h2>
+                        <h2>Other Ways to Partner</h2>
                     </div>
 
                     <h3>Every Gift Builds the Center</h3>
@@ -552,9 +546,7 @@
                 </div>
 
 
-
-                <!-- Form -->
-                <form class="partner-form">
+                <div class="partner-form">
 
 
                     <!-- Gift Selection -->
@@ -600,14 +592,14 @@
                         <label class="gift-card">
                             <input type="radio" name="amount" value="1800">
                             <span class="gift-price">$1,800</span>
-                            <span class="gift-term">($150/Month)</span>
+                            <span class="gift-term">($75/Month)</span>
                         </label>
 
                     </fieldset>
 
 
-                    <!-- Details Form Card -->
-                    <div class="details-form-card">
+                    <!-- Details Form -->
+                    <form class="details-form-card" id="details-form">
                     
 
                         <!-- Form Header -->
@@ -728,15 +720,24 @@
 
                         </div>
                     
-                    </div>
+                    </form>
 
+
+                    <!-- Partner Form Note -->
                     <div class="partner-form-note">
                         <img src="images/asterisk-icon.svg" width="31" height="29" alt="asterisk-icon">
                         <p>Every contribution of $1800 and above will be permanently recognized as part of the campaign, ensuring that your partnership is remembered as foundational to this new chapter of Jewish graduate life.</p>
                     </div>
 
                 
-                </form>
+                </div>
+
+
+                <!-- Commmunity Image -->
+                <div class="community-image">
+                    <img src="images/community-image.jpg" width="1320" height="440"  alt="Students at Chabad Graduate Center ">
+                </div>
+
 
             </div>
         </section>
@@ -748,7 +749,7 @@
 
         <!-- Story Starts -->
 
-        <section class="story-section">
+        <section class="story-section" id="why-this-matters">
             <div class="container">
 
                 <div class="story-layout">
@@ -758,10 +759,10 @@
                     <div class="story-text">
 
                         <!-- badge -->
-                        <div class="badge partner-badge">
+                        <!-- <div class="badge partner-badge">
                             <img src="images/union-icon.svg" width="48" height="48" alt="union icon">
-                            <h2>Ways to Partner</h2>
-                        </div>
+                            <h2>Why This Matters</h2>
+                        </div> -->
 
                         <p class="headline">For years, Tulane Chabad has been a place where students from every background come to celebrate their Judaism with joy, meaning, and community.</p>
 
@@ -806,9 +807,9 @@
 
                                         <img src="images/double-quote-icon.svg" width="60" height="60" alt="Double Quotes Icon">
 
-                                        <blockquote>Tulane Chabad Grads feels like home and has given me the opportunity to meet so many wonderful people who will be friends for life.</blockquote>
+                                        <blockquote>Tulane Chabad Grads became my second family during my time on campus. The support, friendships, and memories I made there will stay with me long after graduation.</blockquote>
 
-                                        <cite>Jessica A.</cite>
+                                        <cite>Daniel M.</cite>
 
 
                                 </div>
@@ -825,9 +826,28 @@
 
                                         <img src="images/double-quote-icon.svg" width="60" height="60" alt="Double Quotes Icon">
 
-                                        <blockquote>Tulane Chabad Grads feels like home and has given me the opportunity to meet so many wonderful people who will be friends for life.</blockquote>
+                                        <blockquote>From meaningful conversations to lifelong friendships, Tulane Chabad Grads created a space where I truly belonged. It shaped my college experience in the best way possible</blockquote>
 
-                                        <cite>Jessica A.</cite>
+                                        <cite>Rachel L.</cite>
+
+                                    
+                                </div>
+
+                            </div>       
+
+
+                             <!-- 4 -->
+                            <div class="swiper-slide">
+
+                                <!-- Story Card -->
+                                <div class="story-card">
+
+
+                                        <img src="images/double-quote-icon.svg" width="60" height="60" alt="Double Quotes Icon">
+
+                                        <blockquote>Tulane Chabad Grads gave me more than a place to gather—it gave me a community that felt like home and friendships I know will last a lifetime</blockquote>
+
+                                        <cite>Michael S.</cite>
 
                                     
                                 </div>
@@ -892,7 +912,7 @@
                     </p>
 
                     <!-- Button -->
-                    <a href="#" class="btn btn-primary white-bg">
+                    <a href="#details-form" class="btn btn-primary white-bg">
                         <span>Dedicate Today</span>
                         <span class="arrow-circle">
                             <img src="images/arrow-icon-primary.svg" width="22" height="25" alt="arrow right">
