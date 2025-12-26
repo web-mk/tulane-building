@@ -1011,6 +1011,22 @@
   line-height: 1.1;
 }
 
+.dedication-card.reserved {
+    pointer-events: none;
+}
+
+.dedication-card.reserved > * {
+    opacity: 0.5;
+}
+
+.dedication-card.reserved .amount:after {
+    content: 'Dedicated';
+    font-style: italic;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 19px;
+}
+
 .dedication-inner .dedication-main .dedication-card h3 {
   color: #6B6A66;
   font-size: 18px;
