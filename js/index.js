@@ -115,6 +115,7 @@ console.log('Story swiper initialized', storySwiper);
 
 
 // Dedication/Amounts Field Populate Logic JS
+let formIframe;
 
 (function () {
   const formatAmount = (value) =>
@@ -126,8 +127,10 @@ console.log('Story swiper initialized', storySwiper);
       '.details-form-card input[name="amount"]'
     );
 
-    if (dedicationInput) dedicationInput.value = dedicationText;
-    if (amountInput) amountInput.value = formatAmount(amountValue);
+    // if (dedicationInput) dedicationInput.value = dedicationText;
+    // if (amountInput) amountInput.value = formatAmount(amountValue);
+    formIframe = formIframe || document.querySelector('.form-iframe');
+    formIframe.contentWindow.postMessage([dedicationText, amountValue], '*'); // Replace '*' with specific origin if possible
   };
 
   const clearGiftPackages = () => {

@@ -1640,6 +1640,7 @@
 
 .story-section {
   padding-block: 120px;
+  padding-top: 0;
   background: linear-gradient(180deg, #f4f1eb 0%, #ffffff 30.67%);
 }
 
@@ -2023,3 +2024,7 @@
 }
 
 /* ------------------------ */
+
+.credit {
+  font-size: 16px;
+}
