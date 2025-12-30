@@ -68,14 +68,14 @@ function toggleAccordion(header) {
     }
 }
 
-// Swiper Configuration
-var swiper = new Swiper(".highlights-swiper", {
+// Highlights Swiper
+const highlightsSwiper = new Swiper(".highlights-swiper", {
   slidesPerView: 4,
   spaceBetween: 20,
   navigation: {
-      prevEl: ".highlights-section .swiper-prev-button",
-      nextEl: ".highlights-section .swiper-next-button",
-    },
+    prevEl: ".highlights-section .swiper-prev-button",
+    nextEl: ".highlights-section .swiper-next-button",
+  },
   breakpoints: {
     320: {
       slidesPerView: 1.1,
@@ -96,15 +96,19 @@ var swiper = new Swiper(".highlights-swiper", {
   },
 });
 
-// Swiper Configuration
-var swiper = new Swiper(".story-swiper", {
+// Story Swiper
+const storySwiper = new Swiper(".story-swiper", {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 20,
+
+  loopAdditionalSlides: 1,
+  watchSlidesProgress: true,
+
   navigation: {
-      prevEl: ".story-section .swiper-prev-button",
-      nextEl: ".story-section .swiper-next-button",
-    },
+    prevEl: ".story-navigation .swiper-prev-button",
+    nextEl: ".story-navigation .swiper-next-button",
+  },
 });
 
 
