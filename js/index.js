@@ -111,6 +111,8 @@ const storySwiper = new Swiper(".story-swiper", {
   },
 });
 
+console.log('Story swiper initialized', storySwiper);
+
 
 // Dedication/Amounts Field Populate Logic JS
 
