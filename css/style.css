@@ -499,6 +499,7 @@
 .center-info-section .info-image-wrapper .info-quote-box {
   position: absolute;
   right: -74px;
+  top: -60px;
   bottom: -60px;
   max-width: 294px;
   padding: 20px;
