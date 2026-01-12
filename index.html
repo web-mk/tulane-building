@@ -563,7 +563,7 @@
                 </div>
 
                 <div class="pledge-text">
-                    Our campaign offers opportunities for meaningful partnership at many levels. Gifts may be made in full or installments over up to 24 months.
+                    Our campaign offers opportunities for meaningful partnership at many levels. Gifts may be made in full or in installments over up to 24 months.
                 </div>
 
 
@@ -614,6 +614,20 @@
                             <input type="radio" name="amount" value="1800">
                             <span class="gift-price">$1,800</span>
                             <!-- <span class="gift-term">($75/Month)</span> -->
+                        </label>
+
+                        <!-- Other Amount Card -->
+                        <label class="gift-card gift-card-other">
+                            <input type="radio" name="amount" value="other" id="other-amount-radio">
+                            <span class="gift-price-wrapper">
+                                <span class="gift-price">Other</span>
+                                <input type="number"
+                                       id="custom-amount-input"
+                                       class="custom-amount-input"
+                                       placeholder="Amount"
+                                       min="1"
+                                       step="1">
+                            </span>
                         </label>
 
                     </fieldset>

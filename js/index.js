@@ -182,11 +182,56 @@ let formIframe;
 
         clearDedicationCards();
 
-        updateFormFields(
-          `${priceText} ${termText}`,
-          numericAmount
-        );
+        // Handle "Other" amount selection
+        if (radio.id === 'other-amount-radio') {
+          const customInput = document.getElementById('custom-amount-input');
+          if (customInput && customInput.value) {
+            updateFormFields(
+              `Other Amount – $${Number(customInput.value).toLocaleString()}`,
+              customInput.value
+            );
+          }
+          // Focus the input field when "Other" is selected
+          setTimeout(() => customInput?.focus(), 100);
+        } else {
+          updateFormFields(
+            `${priceText} ${termText}`,
+            numericAmount
+          );
+        }
       });
     });
+
+  // Handle custom amount input field
+  const customAmountInput = document.getElementById('custom-amount-input');
+  const otherAmountRadio = document.getElementById('other-amount-radio');
+
+  if (customAmountInput && otherAmountRadio) {
+    // Auto-select "Other" radio when clicking on the input field
+    customAmountInput.addEventListener('focus', () => {
+      otherAmountRadio.checked = true;
+      clearDedicationCards();
+    });
+
+    // Update form when custom amount changes
+    customAmountInput.addEventListener('input', () => {
+      if (otherAmountRadio.checked && customAmountInput.value) {
+        updateFormFields(
+          `Other Amount – $${Number(customAmountInput.value).toLocaleString()}`,
+          customAmountInput.value
+        );
+      }
+    });
+
+    // Trigger update on blur if there's a value
+    customAmountInput.addEventListener('blur', () => {
+      if (otherAmountRadio.checked && customAmountInput.value) {
+        updateFormFields(
+          `Other Amount – $${Number(customAmountInput.value).toLocaleString()}`,
+          customAmountInput.value
+        );
+      }
+    });
+  }
 
 })();
